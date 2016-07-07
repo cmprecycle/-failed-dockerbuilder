@@ -8,6 +8,7 @@ RUN echo "http://nl.alpinelinux.org/alpine/edge/community/" >> /etc/apk/reposito
 
 RUN apk update && apk upgrade
 RUN apk add openrc docker
-RUN rc-update add docker boot && service docker start
-RUN docker info
+RUN rc-update add docker boot 
+RUN echo service docker start
+RUN echo docker info
 
